@@ -56,7 +56,7 @@ const deleteNote = async (req,res) =>{
 
     const id = req.params.id;
     try {
-        const note = await noteModel.findByIdAndDelete(id);
+        const note = await noteModel.findByIdAndRemove(id);
         res.status(202).json(note);
 
 
@@ -69,7 +69,7 @@ const deleteNote = async (req,res) =>{
 
 }
 
-const getNotes = async (req,res)=>{
+const getNotes = async (req,res) =>{
 
     try {
 
